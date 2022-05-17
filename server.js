@@ -14,7 +14,7 @@ io.on('connection', socket => {
     }
   })
 })
-serverHttp.listen(3334, () => {
+serverHttp.listen(process.env.PORT || 3334, () => {
   // eslint-disable-next-line no-console
-  console.log(`> Server running on port ${3334}`)
+  console.log(`> Server running on port ${process.env.PORT || 3334}`)
 })
